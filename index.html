@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-  
+
 <body>
     
   
@@ -35,8 +35,9 @@
       <h1>Rio & Bella</h1>
       <p>Dear:</p>
       <h4> Keluarga Djaelani </h4>
-      <div class="simply-countdown"></div>
-      <a href="#home" class="btn btn-lg mt-4">Lihat Undangan</a>
+      <!-- <div class="simply-countdown"></div> -->
+      <a href="#home" id="tampil" class="btn btn-lg mt-4" onclick="putarmusic()">Lihat Undangan</a>
+
     </main>
   </section>
 
@@ -212,10 +213,16 @@
             },           
       })
     </script> -->
-
-    <audio autoplay="autoplay">
-      <source src="audio/1.mp3" type="audio/mp3">
-    </audio>
+    <script>
+      var a = document.getElementById('tampil');
+      function putarmusic() {
+        a.style.display = "none";
+        var audio = new Audio('audio/1.mp3');
+        audio.play();
+      }
+    </script>
+    
+    
 </body>
 
 </html>
